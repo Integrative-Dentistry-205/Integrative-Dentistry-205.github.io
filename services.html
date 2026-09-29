@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="values-page">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transition" content="same-origin">
-    <meta name="description"
-        content="Explore biological dental services in Seattle. Integrative Dentistry offers biocompatible restorations, SMART amalgam removal, ozone therapy, and IV support.">
-    <title>Our Services | Integrative Dentistry Seattle</title>
-    <link rel="canonical" href="https://www.mitchmarderdds.com/services.html">
+    <meta name="description" content="Explore the core values of Integrative Dentistry. From authenticity and education to mindfulness, see the principles guiding our holistic Seattle practice.">
+    <title>Our Values | Integrative Dentistry Seattle</title>
+    <link rel="canonical" href="https://www.mitchmarderdds.com/values.html">
     <link rel="icon" type="image/png" href="assets/Logo.webp">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         disabled id="dyslexia-font">
+    <script>
+        // Check local storage immediately before the page renders
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-theme');
+        }
+        if (localStorage.getItem('adhd-mode') === 'enabled') {
+            document.documentElement.classList.add('adhd-mode');
+        }
+        if (localStorage.getItem('large-cursor') === 'enabled') {
+            document.documentElement.classList.add('large-cursor');
+        }
+        if (localStorage.getItem('dyslexia-font') === 'enabled') {
+            document.body.classList.add('dyslexia-enabled');
+            document.getElementById('dyslexia-font').removeAttribute('disabled');
+        }
+        if (localStorage.getItem('high-contrast') === 'enabled') {
+            document.documentElement.classList.add('high-contrast');
+        }
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -130,16 +148,6 @@
             }
         ]
     }
-    </script>
-    <script>
-        if (localStorage.getItem('dark-mode') === 'enabled') { document.body.classList.add('dark-theme'); }
-        if (localStorage.getItem('adhd-mode') === 'enabled') { document.documentElement.classList.add('adhd-mode'); }
-        if (localStorage.getItem('large-cursor') === 'enabled') { document.documentElement.classList.add('large-cursor'); }
-        if (localStorage.getItem('dyslexia-font') === 'enabled') {
-            document.body.classList.add('dyslexia-enabled');
-            document.getElementById('dyslexia-font').removeAttribute('disabled');
-        }
-        if (localStorage.getItem('high-contrast') === 'enabled') { document.documentElement.classList.add('high-contrast'); }
     </script>
 </head>
 
@@ -268,9 +276,9 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-item">Home</a></li>
                 <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a><div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a href="hygienists.html">Meet The Hygienists</a></div></li>
-                <li><a href="values.html" class="nav-item">Our Values</a></li>
+                <li><a href="values.html" class="nav-item active">Our Values</a></li>
                 <li><a href="about.html" class="nav-item">About Our Office</a></li>
-                <li><a href="services.html" class="nav-item active">Our Services</a></li>
+                <li><a href="services.html" class="nav-item">Our Services</a></li>
                 <li><a href="faq.html" class="nav-item">FAQ</a></li>
                 <li><a href="forms.html" class="nav-item">Patient Forms</a></li>
                 <li><a href="contact.html" class="nav-item">Contact</a></li>
@@ -286,295 +294,426 @@
 </header>
 
     <main>
-        <section class="bento-services-section scroll-animate visible">
-            <div class="services-header">
-                <h1>Our Biological Services</h1>
-                <span class="services-subtitle">Comprehensive Holistic Care</span>
-                <p class="services-intro">Select a care category below to explore our specific treatments, materials,
-                    and biological protocols.</p>
+        <div class="values-scroll-wrapper" id="values-scroll-track">
+            <div class="values-sticky-container">
+                <div class="values-page-header">
+                    <h1>Our Values</h1>
+                </div>
+                <div id="values-presentation-zone">
+                    <!-- Slide 0: TRUST -->
+                    <div class="value-slide icon-right active" id="value-slide-0">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #1e6b7b;">T R U S T</h2>
+                                <ul class="value-definitions">
+                                    <li>Speak the truth.</li>
+                                    <li>Be transparent.</li>
+                                    <li>Keep my word.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Radical honesty: give it, take it, get past it."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #1e6b7b;"><i
+                                    class="fa-solid fa-duotone fa-solid fa-handshake fa-bounce"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 1: AUTHENTICITY -->
+                    <div class="value-slide icon-left" id="value-slide-1">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #2a5c6a;">A U T H E N T I C I T Y</h2>
+                                <ul class="value-definitions">
+                                    <li>Accept myself.</li>
+                                    <li>Reveal myself.</li>
+                                    <li>Be myself.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Harmony of thought and word and deed."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #2a5c6a;"><i
+                                    class="fa-solid fa-fingerprint fa-fade"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 2: COURAGE -->
+                    <div class="value-slide icon-right" id="value-slide-2">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #3b6e50;">C O U R A G E</h2>
+                                <ul class="value-definitions">
+                                    <li>Conquer my fears.</li>
+                                    <li>Trust my instincts.</li>
+                                    <li>Have fierce conversations.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Don’t run away from challenges. Run over them."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #3b6e50;"><i
+                                    class="fa-solid fa-mountain fa-float"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 3: RESILIENCE -->
+                    <div class="value-slide icon-left" id="value-slide-3">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #c85a32;">R E S I L I E N C E</h2>
+                                <ul class="value-definitions">
+                                    <li>Keep going.</li>
+                                    <li>Fail forward.</li>
+                                    <li>The word can’t is a lie.</li>
+                                    <li>Little strokes fell great oaks.</li>
+                                </ul>
+                                <blockquote class="value-quote">"The biggest problem is thinking I shouldn’t have
+                                    problems."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #c85a32;"><i
+                                    class="fa-solid fa-shield-halved fa-beat"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 4: EXCELLENCE -->
+                    <div class="value-slide icon-right" id="value-slide-4">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #9c6628;">E X C E L L E N C E</h2>
+                                <ul class="value-definitions">
+                                    <li>Good is the enemy of great.</li>
+                                    <li>Practice into perfection.</li>
+                                    <li>Better has no finish line.</li>
+                                </ul>
+                                <blockquote class="value-quote">"The only sin is mediocrity."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #9c6628;"><i
+                                    class="fa-solid fa-award fa-flip-360"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 5: GROWTH -->
+                    <div class="value-slide icon-left" id="value-slide-5">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #5c4033;">G R O W T H</h2>
+                                <ul class="value-definitions">
+                                    <li>Defy my limits.</li>
+                                    <li>Have hard days.</li>
+                                    <li>Walk with giants.</li>
+                                </ul>
+                                <blockquote class="value-quote">"When I let go of what I am, I become what I might be."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #5c4033;"><i
+                                    class="fa-solid fa-seedling fa-jello"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 6: EDUCATION -->
+                    <div class="value-slide icon-right" id="value-slide-6">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #1e6b7b;">E D U C A T I O N</h2>
+                                <ul class="value-definitions">
+                                    <li>Seek the truth.</li>
+                                    <li>Read the research.</li>
+                                    <li>Diminish ignorance.</li>
+                                </ul>
+                                <blockquote class="value-quote">"When I know better, I do better."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #1e6b7b;"><i
+                                    class="fa-solid fa-book-open fa-jello"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 7: PREPARATION -->
+                    <div class="value-slide icon-left" id="value-slide-7">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #2a5c6a;">P R E P A R A T I O N</h2>
+                                <ul class="value-definitions">
+                                    <li>Measure twice.</li>
+                                    <li>Expect curveballs.</li>
+                                    <li>Overcome the obstacle before the obstacle.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Tomorrow belongs to those who prepare today."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #2a5c6a;"><i
+                                    class="fa-solid fa-clipboard-check fa-wag"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 8: INNOVATION -->
+                    <div class="value-slide icon-right" id="value-slide-8">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #3b6e50;">I N N O V A T I O N</h2>
+                                <ul class="value-definitions">
+                                    <li>Be an original.</li>
+                                    <li>Cut a new path.</li>
+                                    <li>Change the game.</li>
+                                </ul>
+                                <blockquote class="value-quote">"The world is changed by people crazy enough to think
+                                    they can."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #3b6e50;"><i
+                                    class="fa-solid fa-lightbulb fa-buzz"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 9: OWNERSHIP -->
+                    <div class="value-slide icon-left" id="value-slide-9">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #c85a32;">O W N E R S H I P</h2>
+                                <ul class="value-definitions">
+                                    <li>Be the thermostat.</li>
+                                    <li>I get what I deserve.</li>
+                                    <li>Put down the shovel.</li>
+                                </ul>
+                                <blockquote class="value-quote">"The grass is green where I water it. (Don’t water the
+                                    weeds.)"</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #c85a32;"><i
+                                    class="fa-solid fa-key fa-flip"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 10: LEADERSHIP -->
+                    <div class="value-slide icon-right" id="value-slide-10">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #9c6628;">L E A D E R S H I P</h2>
+                                <ul class="value-definitions">
+                                    <li>Be someone worth following.</li>
+                                    <li>I get what I tolerate.</li>
+                                    <li>Start with Why.</li>
+                                </ul>
+                                <blockquote class="value-quote">"My people are winning, growing, and being heard."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #9c6628;"><i
+                                    class="fa-solid fa-compass fa-spin"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 11: THRIFT -->
+                    <div class="value-slide icon-left" id="value-slide-11">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #5c4033;">T H R I F T</h2>
+                                <ul class="value-definitions">
+                                    <li>Do more with less.</li>
+                                    <li>Do it right the first time.</li>
+                                    <li>Don't step over dollars for pennies.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Work expands to fill the resources allotted for its
+                                    completion."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #5c4033;"><i
+                                    class="fa-solid fa-scale-balanced fa-wag"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 12: SIMPLICITY -->
+                    <div class="value-slide icon-right" id="value-slide-12">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #1e6b7b;">S I M P L I C I T Y</h2>
+                                <ul class="value-definitions">
+                                    <li>Keep it simple.</li>
+                                    <li>Make it effortless.</li>
+                                    <li>Progress by subtraction.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Get what I want by getting rid of what I don't."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #1e6b7b;"><i
+                                    class="fa-solid fa-feather fa-float"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 13: GRATITUDE -->
+                    <div class="value-slide icon-left" id="value-slide-13">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #2a5c6a;">G R A T I T U D E</h2>
+                                <ul class="value-definitions">
+                                    <li>See the silver linings.</li>
+                                    <li>Count my blessings.</li>
+                                    <li>Appreciate aloud.</li>
+                                    <li>Enough is a feast.</li>
+                                </ul>
+                                <blockquote class="value-quote">"I may spoil what I have by desiring what I have not."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #2a5c6a;"><i
+                                    class="fa-solid fa-hand-holding-heart fa-beat"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 14: GUSTO -->
+                    <div class="value-slide icon-right" id="value-slide-14">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #3b6e50;">G U S T O</h2>
+                                <ul class="value-definitions">
+                                    <li>Anchors up.</li>
+                                    <li>Be the sunshine.</li>
+                                    <li>Collect moments.</li>
+                                </ul>
+                                <blockquote class="value-quote">"I only live once. Done right, once is enough."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #3b6e50;"><i
+                                    class="fa-solid fa-fire-flame-curved fa-beat-fade"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 15: LEVITY -->
+                    <div class="value-slide icon-left" id="value-slide-15">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #c85a32;">L E V I T Y</h2>
+                                <ul class="value-definitions">
+                                    <li>Have fun.</li>
+                                    <li>Never grow up.</li>
+                                    <li>Laugh out loud.</li>
+                                </ul>
+                                <blockquote class="value-quote">"I am most comical when I take myself too seriously."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #c85a32;"><i
+                                    class="fa-solid fa-grin-beam fa-bounce"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 16: HUMANITY -->
+                    <div class="value-slide icon-right" id="value-slide-16">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #9c6628;">H U M A N I T Y</h2>
+                                <ul class="value-definitions">
+                                    <li>Give joy.</li>
+                                    <li>People first.</li>
+                                    <li>Assume the best.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Do unto others as they would have me do unto them."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #9c6628;"><i
+                                    class="fa-solid fa-hands-holding fa-float"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 17: CONNECTION -->
+                    <div class="value-slide icon-left" id="value-slide-17">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #5c4033;">C O N N E C T I O N</h2>
+                                <ul class="value-definitions">
+                                    <li>Be interested in others.</li>
+                                    <li>Meet people where they are.</li>
+                                    <li>Service the relationship first.</li>
+                                </ul>
+                                <blockquote class="value-quote">"They remember 8% of what I say, and 100% of how I make
+                                    them feel."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #5c4033;"><i
+                                    class="fa-solid fa-circle-nodes fa-spin-snap-8"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 18: COMMUNICATION -->
+                    <div class="value-slide icon-right" id="value-slide-18">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #1e6b7b;">C O M M U N I C A T I O N</h2>
+                                <ul class="value-definitions">
+                                    <li>Listening is loving.</li>
+                                    <li>Talk when the ear is ready.</li>
+                                    <li>Disagree without being disagreeable.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Speak only if it improves upon the silence."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #1e6b7b;"><i
+                                    class="fa-solid fa-comment-dots fa-flip"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 19: GIVING -->
+                    <div class="value-slide icon-left" id="value-slide-19">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #2a5c6a;">G I V I N G</h2>
+                                <ul class="value-definitions">
+                                    <li>Make a difference.</li>
+                                    <li>Seek how to serve.</li>
+                                    <li>It is in giving that I receive.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Judge each day not by what I reap, but by what I sow."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #2a5c6a;"><i
+                                    class="fa-solid fa-gift fa-bounce"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 20: SERVICE -->
+                    <div class="value-slide icon-right" id="value-slide-20">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #3b6e50;">S E R V I C E</h2>
+                                <ul class="value-definitions">
+                                    <li>Get permission.</li>
+                                    <li>Nothing is trivial.</li>
+                                    <li>Frame the experience.</li>
+                                    <li>Delight unexpectedly.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Give them what they won’t get anywhere else."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #3b6e50;"><i
+                                    class="fa-solid fa-hand-sparkles fa-wag"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 21: TEAM -->
+                    <div class="value-slide icon-left" id="value-slide-21">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #c85a32;">T E A M</h2>
+                                <ul class="value-definitions">
+                                    <li>Less me, more we.</li>
+                                    <li>I rise by lifting others.</li>
+                                    <li>Many hands make light work.</li>
+                                </ul>
+                                <blockquote class="value-quote">"To go fast, I go alone. To go far, we go together."
+                                </blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #c85a32;"><i
+                                    class="fa-solid fa-users fa-float"></i></div>
+                        </div>
+                    </div>
+                    <!-- Slide 22: WELLNESS -->
+                    <div class="value-slide icon-right" id="value-slide-22">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #9c6628;">W E L L N E S S</h2>
+                                <ul class="value-definitions">
+                                    <li>Love myself enough.</li>
+                                    <li>Health is the first wealth.</li>
+                                    <li>Prevention is the best medicine.</li>
+                                </ul>
+                                <blockquote class="value-quote">"Inspect all things which enter my body, my mind, and my
+                                    heart."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #9c6628;"><i class="fa-solid fa-spa fa-wag"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 23: MINDFULNESS -->
+                    <div class="value-slide icon-left" id="value-slide-23">
+                        <div class="value-content-wrapper">
+                            <div class="value-text-block">
+                                <h2 class="value-title" style="color: #5c4033;">M I N D F U L N E S S</h2>
+                                <ul class="value-definitions">
+                                    <li>Breathe.</li>
+                                    <li>Name the feeling.</li>
+                                    <li>Meet the moment.</li>
+                                    <li>Cherish mistakes.</li>
+                                    <li>This too will pass.</li>
+                                </ul>
+                                <blockquote class="value-quote">"I improve the world around me when I improve the world
+                                    within me."</blockquote>
+                            </div>
+                            <div class="value-icon-block" style="color: #5c4033;"><i
+                                    class="fa-solid fa-brain fa-buzz"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="bento-grid">
-
-                <div class="bento-card bento-wide" data-drawer-target="biocompatible">
-                    <div class="bento-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <h2>Biocompatible Restorations</h2>
-                    <p>100% metal-free, BPA-free, and fluoride-free holistic solutions designed to align with your
-                        systemic health.</p>
-                    <span class="bento-explore-link">Explore Materials <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">We exclusively utilize premium, non-reactive materials to
-                            ensure your
-                            dental restorations exist in perfect harmony with your immune system.</div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>BPA-Free Composite Fillings</h4>
-                                <p>Tooth-colored structural resins completely devoid of Bisphenol A, offering a natural
-                                    and durable fix.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Ceramic Crowns & Onlays</h4>
-                                <p>High-strength, metal-free zirconium and porcelain caps tailored via CAD/CAM for a
-                                    biocompatible, precise fit.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Fluoride-Free Treatments</h4>
-                                <p>Alternative natural remineralization protocols avoiding systemic fluoride exposure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card" data-drawer-target="smart">
-                    <div class="bento-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h2>SMART Protocol</h2>
-                    <p>Safe Mercury Amalgam Removal Technique protecting your respiratory pathways.</p>
-                    <span class="bento-explore-link">View Protocol <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">The Safe Mercury Amalgam Removal Technique (SMART) is a
-                            rigorous set of
-                            safety recommendations developed by the International Academy of Oral Medicine and
-                            Toxicology (IAOMT) to protect patients, dental staff, and the environment from mercury
-                            exposure. Because traditional silver fillings contain approximately 50% mercury and release
-                            toxic vapors and particulates when disrupted, the SMART protocol utilizes extensive
-                            protective measures—including specialized air filtration, strict physical barriers,
-                            alternative oxygen sources, and specific drilling techniques—to ensure the safest possible
-                            removal process.</div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Advanced Airway Protection</h4>
-                                <p>Patients breathe oxygen through a sealed nasal mask, while high-volume at-source
-                                    vacuums and room air filters capture harmful mercury vapors.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Strict Physical Barriers</h4>
-                                <p>Full-body covers and a properly sealed non-latex dental dam are used to prevent
-                                    mercury particles from contacting your skin, clothing, and digestive tract.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Safe Sectioning Techniques</h4>
-                                <p>Copious amounts of water is used along with specialized tools to safely cut and
-                                    remove the filling in large chunks rather than grinding it+.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card" data-drawer-target="ozone">
-                    <div class="bento-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h2>Ozone Therapy</h2>
-                    <p>Natural, highly effective antimicrobial oxygen treatments for accelerated healing.</p>
-                    <span class="bento-explore-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">Utilizing ozone therapy as a natural, powerful, and drug-free
-                            treatment
-                            to combat oral infections and promote healing. By applying mixtures of oxygen and ozone—in
-                            gaseous, water, or oil forms—directly to diseased gums or decayed teeth, they create an
-                            oxidative burst that safely eliminates bacteria, viruses, and fungi. This therapy penetrates
-                            both hard and soft tissues to stimulate blood flow, enhance immunity, and accelerate the
-                            body's natural healing processes without the side effects associated with pharmaceutical
-                            drugs.</div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Natural Infection Control</h4>
-                                <p>Uses energized oxygen to safely kill bacteria, viruses, fungi, and parasites without
-                                    pharmaceutical drugs.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Versatile Application</h4>
-                                <p>Applied as a gas, ozonated water, or ozonated oil directly to decayed teeth or
-                                    diseased gums.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Accelerated Healing</h4>
-                                <p>Penetrates hard and soft tissues to stimulate blood flow, produce antioxidants, and
-                                    boost your immune response.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card bento-wide" data-drawer-target="iv">
-                    <div class="bento-icon"><i class="fa-duotone fa-solid fa-hands-holding-heart"></i></div>
-                    <h2>IV Therapy & Support</h2>
-                    <p>Custom intravenous treatments to support your body's natural healing processes, without affecting
-                        your gut health.</p>
-                    <span class="bento-explore-link">View Options <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">Aiding in protecting, supporting, and healing your body,
-                            without
-                            affecting your gut biome.</div>
-                        <div class="service-drawer-action" data-text="View Full IV Menu" data-link="ivtherapy.html">
-                        </div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Metal Detoxification</h4>
-                                <p>Reduces the toxic burden of heavy metal exposure including mercury, lead, cadmium,
-                                    aluminum, arsenic, and excess iron and copper.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Surgery Support</h4>
-                                <p>Great for supporting all your recovery needs after any surgery, including
-                                    extractions.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Radiation Repair</h4>
-                                <p>A radiation countermeasure providing antioxidants that mitigate mitochondrial DNA
-                                    damage from x-rays, chemotherapeutic agents, and flying.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card bento-wide" data-drawer-target="periodontics">
-                    <div class="bento-icon"><i class="fa-solid fa-tooth"></i></div>
-                    <h2>Biological Periodontics</h2>
-                    <p>Protecting the oral-systemic connection. We treat underlying inflammatory conditions gently
-                        without heavy chemicals to protect your heart and cardiovascular health.</p>
-                    <span class="bento-explore-link">Explore Treatments <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">Addressing the critical oral-systemic connection by
-                            eliminating
-                            inflammatory gum disease without harsh chemicals or invasive cutting.</div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Microscopic Plaque Analysis</h4>
-                                <p>Identifying specific bacterial strains under a microscope for targeted, intelligent
-                                    therapy.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Laser Pocket Decontamination</h4>
-                                <p>Gentle laser therapy to eliminate diseased tissue and biofilm while preserving
-                                    healthy gums.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Homecare Guidance and Support</h4>
-                                <p>Judgement-free teaching of proper at-home care for improved oral health.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card" data-drawer-target="surgery">
-                    <div class="bento-icon"><i class="fa-solid fa-staff-snake"></i></div>
-                    <h2>Holistic Oral Surgery</h2>
-                    <p>Biological extractions, PRF healing, and ceramic implant restorations.</p>
-                    <span class="bento-explore-link">View Options <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">When extraction or surgery is inevitable, we use
-                            systemic-friendly
-                            techniques to guarantee safe removal and rapid recovery.</div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Biological Extractions</h4>
-                                <p>Thorough removal of the periodontal ligament (cavitation prevention) following tooth
-                                    extraction.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>PRF (Platelet-Rich Fibrin)</h4>
-                                <p>Using a small sample of your own blood to create a natural healing matrix for
-                                    surgical sites.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Zirconia Implants</h4>
-                                <p>A 100% metal-free, highly biocompatible ceramic alternative to traditional titanium
-                                    root implants.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card" data-drawer-target="gbt">
-                    <div class="bento-icon"><i class="fa-solid fa-wind"></i></div>
-                    <h2>Guided Biofilm Therapy</h2>
-                    <p>A systematic, predictable solution for dental biofilm management using state-of-the-art AIRFLOW
-                        technologies.</p>
-                    <span class="bento-explore-link">Explore AIRFLOW <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">Cleanings for Sensitive Teeth! Guided Biofilm Therapy (GBT) is
-                            a
-                            systematic, predictable solution for dental biofilm management using state-of-the-art
-                            AIRFLOW technologies. Air, heated water and low-abrasive powder combine to break down and
-                            flush away biofilm.</div>
-                        <div class="service-drawer-media" data-video="G_lspojuA0U">
-                            <img src="assets/gbt-before-300.webp" loading="lazy" alt="Before">
-                            <img src="assets/gbt-disclosure-300.webp" loading="lazy" alt="Disclosed">
-                            <img src="assets/gbt-after-300.webp" loading="lazy" alt="After AIRFLOW®">
-                        </div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Minimally Invasive</h4>
-                                <p>AIRFLOW® is gentle on all types of dental tissues including dentine, cementum,
-                                    enamel, and gums.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Maximum Comfort</h4>
-                                <p>The spray mixture does all the work, and with the fine-grain powder, it just feels
-                                    like warm water is being sprayed on the gums.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Universal Application</h4>
-                                <p>Can be applied to almost any patient, including those with implants, crowns,
-                                    composite fillings, braces, and pediatric patients.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card bento-wide" data-drawer-target="eboo">
-                    <div class="bento-icon"><i class="fa-duotone fa-solid fa-syringe"></i></div>
-                    <h2>IV Ozone Therapies and Blood Draws</h2>
-                    <p>Experience advanced clinical support with our comprehensive naturopathic offerings, including
-                        Extracorporeal Blood Oxygenation and Ozonation (EBOO), Ultraviolet Blood Irradiation (UVBI), and
-                        comfortable on-site phlebotomy services.</p>
-                    <span class="bento-explore-link">Explore Treatments <i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="service-drawer-data" style="display: none;">
-                        <div class="service-drawer-intro">From EBOO to UVBI, and blood draws for testings, Dr. Daneals
-                            has an expanded repertoire of treatments and modalities to offer in addition to IV Therapies
-                            in our office.</div>
-                        <div class="service-drawer-list">
-                            <div class="service-drawer-item">
-                                <h4>Extracorporeal Blood Oxygenation & Ozonation</h4>
-                                <p>More commonly known as 'EBOO', it is an intelligent ozone therapy that removes blood
-                                    from the body and runs it through a closed-circuit system. EBOO has been shown to
-                                    treat 'Long COVID' and adverse drug reactions, proving its status as a superior IV
-                                    ozone treatment, treating more blood by volume that any other ozone treatment
-                                    available, while remaining gentle in its lower concentrations of ozone.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Ultraviolet Blood Irradiation</h4>
-                                <p>Also known as Biophoton Light Therapy, UVBI is a cutting edge therapy that uses the
-                                    combination of ozone gas and UVB light to purify, sterilize, and destroy
-                                    micro-organisms in the blood.</p>
-                            </div>
-                            <div class="service-drawer-item">
-                                <h4>Blood Draw Services</h4>
-                                <p>With on-site phlebotomy, Dr. Daneals is able to offer a quick, stress-free blood draw
-                                    experience for a multitude of tests. All blood is processed through LabCorp.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
-
-    <div id="drawer-overlay" class="drawer-overlay"></div>
-    <div id="service-drawer" class="off-canvas-drawer">
-        <div class="drawer-header">
-            <div class="drawer-icon" id="drawer-icon"><i class="fa-solid fa-circle-info"></i></div>
-            <h3 id="drawer-title">Category Title</h3>
-            <button id="close-drawer-btn" aria-label="Close drawer"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="drawer-content">
-            <p id="drawer-intro" class="drawer-intro">Category introduction goes here.</p>
-            <ul id="drawer-list" class="drawer-service-list">
-            </ul>
-            <a href="https://dental4.me/integrativedentistry" class="drawer-action-btn">Schedule an Appointment <i
-                    class="fa-solid fa-calendar-check"></i></a>
-        </div>
-    </div>
 
     <footer id="contact" class="scroll-animate">
     <div class="footer-grid">
@@ -635,12 +774,9 @@
 </footer>
 
     <div id="cursor-tooltip" class="cursor-tooltip"></div>
-    <div id="image-lightbox-overlay" class="lightbox-overlay hidden">
-        <button id="lightbox-close-btn" class="lightbox-close" data-tooltip="Close Image" aria-label="Close image"><i
-                class="fa-solid fa-xmark"></i></button>
-        <img id="lightbox-img" class="lightbox-img" src="" alt="Expanded View">
-    </div>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
