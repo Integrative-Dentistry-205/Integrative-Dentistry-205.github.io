@@ -260,6 +260,7 @@ section {
     margin-bottom: 48px;
 }
 
+.section-header h1,
 .section-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
@@ -971,6 +972,10 @@ html.high-contrast body.dark-theme .dropdown-content a.active {
     color: inherit;
 }
 
+#theme-btn .coin-face i {
+    font-size: 1.6rem !important;
+}
+
 .pos-text .bubble-icon {
     width: 36px;
     height: 36px;
@@ -1140,7 +1145,7 @@ html.large-cursor body,
 body.large-cursor,
 html.large-cursor *,
 body.large-cursor * {
-    cursor: url('assets/aero_arrow_l.png'), auto !important;
+    cursor: url('assets/aero_arrow_l.webp'), auto !important;
 }
 
 html.large-cursor a,
@@ -1148,18 +1153,18 @@ html.large-cursor button,
 html.large-cursor .action-bubble,
 html.large-cursor a *,
 html.large-cursor button * {
-    cursor: url('assets/aero_link_l.png'), pointer !important;
+    cursor: url('assets/aero_link_l.webp'), pointer !important;
 }
 
 html.large-cursor .js-image-tooltip-trigger,
 html.large-cursor [data-tooltip],
 html.large-cursor .js-image-tooltip-trigger *,
 html.large-cursor [data-tooltip] * {
-    cursor: url('assets/aero_helpsel_l.png'), help !important;
+    cursor: url('assets/aero_helpsel_l.webp'), help !important;
 }
 
 html.large-cursor .gallery-item .drawer-media-img {
-    cursor: url('assets/aero_zoom_l.png'), zoom-in !important;
+    cursor: url('assets/aero_zoom_l.webp'), zoom-in !important;
 }
 
 .cursor-tooltip {
@@ -1827,7 +1832,7 @@ body.dark-theme .hero-section {
     margin-bottom: 12px;
 }
 
-.services-header h2 {
+.services-header h1, .services-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
     color: var(--text-dark);
@@ -1880,7 +1885,7 @@ body.dark-theme .hero-section {
     transition: all 0.4s ease;
 }
 
-.service-nav-text h3 {
+.service-nav-text h2 {
     font-size: 18px;
     color: var(--text-dark);
     margin-bottom: 5px;
@@ -2771,7 +2776,7 @@ html.high-contrast body.dark-theme .review-nav-btn:hover .fa-solid {
     animation: radiate-pulse 1.5s infinite;
 }
 
-.bento-card h3 {
+.bento-card h2, .bento-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: var(--text-dark);
@@ -3185,7 +3190,7 @@ html.high-contrast body.dark-theme .drawer-secondary-btn:hover {
     margin-bottom: 20px;
 }
 
-.values-page-header h2 {
+.values-page-header h1, .values-page-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     color: var(--text-dark);
@@ -3322,7 +3327,7 @@ html.high-contrast body.dark-theme .drawer-secondary-btn:hover {
         padding-top: 20px;
     }
 
-    .values-page-header h2 {
+.values-page-header h1, .values-page-header h2 {
         font-size: 2.2rem;
     }
 
@@ -3364,6 +3369,7 @@ html.high-contrast body.dark-theme .drawer-secondary-btn:hover {
 /* (Covered by max-width 1024px) */
 
 /* --- DARK MODE --- */
+body.dark-theme .values-page-header h1,
 body.dark-theme .values-page-header h2 {
     color: #ffffff;
 }
@@ -3676,7 +3682,7 @@ body.dark-theme .image-tooltip-caption {
     margin: 0 auto 50px auto;
 }
 
-.team-header h2 {
+.team-header h1, .team-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
     color: var(--text-dark);
@@ -3723,7 +3729,7 @@ body.dark-theme .image-tooltip-caption {
     transform: scale(1.03);
 }
 
-.provider-avatar-card h3 {
+.provider-avatar-card h2 {
     font-size: 19px;
     font-weight: 600;
     color: var(--text-dark);
@@ -5520,7 +5526,7 @@ footer {
     gap: 80px;
 }
 
-.contact-details h2 {
+.contact-details h1, .contact-details h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     margin-bottom: 16px;
@@ -5953,7 +5959,7 @@ body.dark-theme .map-wrapper iframe {
     padding-bottom: 15px;
 }
 
-.iv-card-header h3 {
+.iv-card-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     color: var(--teal-base);
