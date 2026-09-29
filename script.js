@@ -540,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Off-Canvas Bento Drawer Engine & Library
+    // Off-Canvas Bento Drawer Engine & Library (DOM Parser Update)
     const bentoCards = document.querySelectorAll('.bento-card');
     const drawer = document.getElementById('service-drawer');
     const overlay = document.getElementById('drawer-overlay');
@@ -550,114 +550,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const drawerIntro = document.getElementById('drawer-intro');
     const drawerList = document.getElementById('drawer-list');
 
-    const serviceData = {
-        biocompatible: {
-            title: "Biocompatible Restorations",
-            icon: '<i class="fa-solid fa-seedling"></i>',
-            intro: "We exclusively utilize premium, non-reactive materials to ensure your dental restorations exist in perfect harmony with your immune system.",
-            services: [
-                { name: "BPA-Free Composite Fillings", desc: "Tooth-colored structural resins completely devoid of Bisphenol A, offering a natural and durable fix." },
-                { name: "Ceramic Crowns & Onlays", desc: "High-strength, metal-free zirconium and porcelain caps tailored via CAD/CAM for a biocompatible, precise fit." },
-                { name: "Fluoride-Free Treatments", desc: "Alternative natural remineralization protocols avoiding systemic fluoride exposure." }
-            ]
-        },
-        smart: {
-            title: "SMART Protocol",
-            icon: '<i class="fa-solid fa-shield-halved"></i>',
-            intro: "The Safe Mercury Amalgam Removal Technique (SMART) is a rigorous set of safety recommendations developed by the International Academy of Oral Medicine and Toxicology (IAOMT) to protect patients, dental staff, and the environment from mercury exposure. Because traditional silver fillings contain approximately 50% mercury and release toxic vapors and particulates when disrupted, the SMART protocol utilizes extensive protective measures—including specialized air filtration, strict physical barriers, alternative oxygen sources, and specific drilling techniques—to ensure the safest possible removal process.",
-            services: [
-                { name: "Advanced Airway Protection", desc: "Patients breathe oxygen through a sealed nasal mask, while high-volume at-source vacuums and room air filters capture harmful mercury vapors." },
-                { name: "Strict Physical Barriers", desc: "Full-body covers and a properly sealed non-latex dental dam are used to prevent mercury particles from contacting your skin, clothing, and digestive tract." },
-                { name: "Safe Sectioning Techniques", desc: "Copious amounts of water is used along with specialized tools to safely cut and remove the filling in large chunks rather than grinding it+." }
-            ]
-        },
-        ozone: {
-            title: "Ozone Therapy",
-            icon: '<i class="fa-solid fa-bolt"></i>',
-            intro: "Utilizing ozone therapy as a natural, powerful, and drug-free treatment to combat oral infections and promote healing. By applying mixtures of oxygen and ozone—in gaseous, water, or oil forms—directly to diseased gums or decayed teeth, they create an oxidative burst that safely eliminates bacteria, viruses, and fungi. This therapy penetrates both hard and soft tissues to stimulate blood flow, enhance immunity, and accelerate the body's natural healing processes without the side effects associated with pharmaceutical drugs.",
-            services: [
-                { name: "Natural Infection Control", desc: "Uses energized oxygen to safely kill bacteria, viruses, fungi, and parasites without pharmaceutical drugs." },
-                { name: "Versatile Application", desc: "Applied as a gas, ozonated water, or ozonated oil directly to decayed teeth or diseased gums." },
-                { name: "Accelerated Healing", desc: "Penetrates hard and soft tissues to stimulate blood flow, produce antioxidants, and boost your immune response." }
-            ]
-        },
-        iv: {
-            title: "IV Therapy & Support",
-            icon: '<i class="fa-solid fa-crutch"></i>',
-            intro: "Aiding in protecting, supporting, and healing your body, without affecting your gut biome.",
-            action: {
-                text: "View Full IV Menu",
-                link: "ivtherapy.html"
-            },
-            services: [
-                { name: "Metal Detoxification", desc: "Reduces the toxic burden of heavy metal exposure including mercury, lead, cadmium, aluminum, arsenic, and excess iron and copper." },
-                { name: "Surgery Support", desc: "Great for supporting all your recovery needs after any surgery, including extractions." },
-                { name: "Radiation Repair", desc: "A radiation countermeasure providing antioxidants that mitigate mitochondrial DNA damage from x-rays, chemotherapeutic agents, and flying." }
-            ]
-        },
-        periodontics: {
-            title: "Biological Periodontics",
-            icon: '<i class="fa-solid fa-tooth"></i>',
-            intro: "Addressing the critical oral-systemic connection by eliminating inflammatory gum disease without harsh chemicals or invasive cutting.",
-            services: [
-                { name: "Microscopic Plaque Analysis", desc: "Identifying specific bacterial strains under a microscope for targeted, intelligent therapy." },
-                { name: "Laser Pocket Decontamination", desc: "Gentle laser therapy to eliminate diseased tissue and biofilm while preserving healthy gums." },
-                { name: "Homecare Guidance and Support", desc: "Judgement-free teaching of proper at-home care for improved oral health." }
-            ]
-        },
-        surgery: {
-            title: "Holistic Oral Surgery",
-            icon: '<i class="fa-solid fa-staff-snake"></i>',
-            intro: "When extraction or surgery is inevitable, we use systemic-friendly techniques to guarantee safe removal and rapid recovery.",
-            services: [
-                { name: "Biological Extractions", desc: "Thorough removal of the periodontal ligament (cavitation prevention) following tooth extraction." },
-                { name: "PRF (Platelet-Rich Fibrin)", desc: "Using a small sample of your own blood to create a natural healing matrix for surgical sites." },
-                { name: "Zirconia Implants", desc: "A 100% metal-free, highly biocompatible ceramic alternative to traditional titanium root implants." }
-            ]
-        },
-        gbt: {
-            title: "Guided Biofilm Therapy",
-            icon: '<i class="fa-solid fa-wind"></i>',
-            intro: "Cleanings for Sensitive Teeth! Guided Biofilm Therapy (GBT) is a systematic, predictable solution for dental biofilm management using state-of-the-art AIRFLOW technologies. Air, heated water and low-abrasive powder combine to break down and flush away biofilm.",
-            videoId: "G_lspojuA0U",
-            images: [
-                { src: "assets/gbt-before.png", label: "Before" },
-                { src: "assets/gbt-disclosure.png", label: "Disclosed" },
-                { src: "assets/gbt-after.png", label: "After AIRFLOW®" }
-            ],
-            services: [
-                { name: "Minimally Invasive", desc: "AIRFLOW® is gentle on all types of dental tissues including dentine, cementum, enamel, and gums." },
-                { name: "Maximum Comfort", desc: "The spray mixture does all the work, and with the fine-grain powder, it just feels like warm water is being sprayed on the gums." },
-                { name: "Universal Application", desc: "Can be applied to almost any patient, including those with implants, crowns, composite fillings, braces, and pediatric patients." }
-            ]
-        },
-        eboo: {
-            title: "IV Ozone Therapies and Blood Draws",
-            icon: '<i class="fa-duotone fa-solid fa-syringe fa-flip-horizontal"></i>',
-            intro: "From EBOO to UVBI, and blood draws for testings, Dr. Daneals has an expanded repetoir of treatments and modalities to offer in addition to IV Therapies in our office.",
-            services: [
-                { name: "Extracorporeal Blood Oxygenation & Ozonation", desc: "More commonly known as 'EBOO', it is an intelligent ozone therapy that removes blood from the body and runs it through a closed-circuit system. EBOO has been shown to treat 'Long COVID' and adverse drug reactions, proving its status as a superior IV ozone treatment, treating more blood by volume that any other ozone treatment available, while remaining gentle in its lower concentrations of ozone." },
-                { name: "Ultraviolet Blood Irradiation", desc: "Also known as Biophoton Light Therapy, UVBI is a cutting edge therapy that uses the combination of ozone gas and UVB light to purify, sterilize, and destroy micro-organisms in the blood." },
-                { name: "Blood Draw Services", desc: "With on-site phlebotomy, Dr. Daneals is able to offer a quick, stress-free blood draw experience for a multitude of tests. All blood is processed through LabCorp." }
-            ]
-        }
-    };
-
     if (bentoCards.length > 0 && drawer) {
         bentoCards.forEach(card => {
             card.addEventListener('click', () => {
-                const targetKey = card.getAttribute('data-drawer-target');
-                const data = serviceData[targetKey];
+                const drawerData = card.querySelector('.service-drawer-data');
 
-                if (data) {
-                    drawerTitle.textContent = data.title;
-                    drawerIcon.innerHTML = data.icon;
-                    drawerIntro.textContent = data.intro;
+                if (drawerData) {
+                    drawerTitle.textContent = card.querySelector('h2').textContent;
+                    drawerIcon.innerHTML = card.querySelector('.bento-icon').innerHTML;
+
+                    const introEl = drawerData.querySelector('.service-drawer-intro');
+                    drawerIntro.textContent = introEl ? introEl.textContent : '';
 
                     drawerList.innerHTML = '';
-                    data.services.forEach(item => {
+                    const services = drawerData.querySelectorAll('.service-drawer-item');
+                    services.forEach(item => {
                         const li = document.createElement('li');
-                        li.innerHTML = `<h4>${item.name}</h4><p>${item.desc}</p>`;
+                        li.innerHTML = `<h4>${item.querySelector('h4').textContent}</h4><p>${item.querySelector('p').textContent}</p>`;
                         drawerList.appendChild(li);
                     });
 
@@ -667,39 +576,44 @@ document.addEventListener('DOMContentLoaded', () => {
                         mediaContainer.id = 'drawer-media';
                         drawerIntro.insertAdjacentElement('afterend', mediaContainer);
                     }
-
                     mediaContainer.innerHTML = '';
 
-                    if (data.images && data.images.length > 0) {
-                        let galleryHTML = '<div class="drawer-image-gallery">';
-                        data.images.forEach(img => {
-                            galleryHTML += `
-                                <div class="gallery-item">
-                                    <img src="${img.src}" alt="${img.label}" class="drawer-media-img">
-                                    <span class="gallery-label">${img.label}</span>
-                                </div>
-                            `;
-                        });
-                        galleryHTML += '</div>';
-                        mediaContainer.innerHTML += galleryHTML;
-                    }
+                    const drawerMedia = drawerData.querySelector('.service-drawer-media');
+                    if (drawerMedia) {
+                        const imgs = drawerMedia.querySelectorAll('img');
+                        if (imgs.length > 0) {
+                            let galleryHTML = '<div class="drawer-image-gallery">';
+                            imgs.forEach(img => {
+                                galleryHTML += `
+                                    <div class="gallery-item">
+                                        <img src="${img.src}" alt="${img.alt}" class="drawer-media-img">
+                                        <span class="gallery-label">${img.alt}</span>
+                                    </div>
+                                `;
+                            });
+                            galleryHTML += '</div>';
+                            mediaContainer.innerHTML += galleryHTML;
+                        }
 
-                    if (data.videoId) {
-                        mediaContainer.innerHTML += `
-                            <div class="video-wrapper">
-                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/${data.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>`;
+                        const videoId = drawerMedia.getAttribute('data-video');
+                        if (videoId) {
+                            mediaContainer.innerHTML += `
+                                <div class="video-wrapper">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>`;
+                        }
                     }
 
                     const oldExtraBtn = document.getElementById('drawer-extra-btn');
                     if (oldExtraBtn) oldExtraBtn.remove();
 
-                    if (data.action) {
+                    const drawerAction = drawerData.querySelector('.service-drawer-action');
+                    if (drawerAction) {
                         const extraBtn = document.createElement('a');
                         extraBtn.id = 'drawer-extra-btn';
-                        extraBtn.href = data.action.link;
+                        extraBtn.href = drawerAction.getAttribute('data-link');
                         extraBtn.className = 'drawer-action-btn drawer-secondary-btn';
-                        extraBtn.innerHTML = `${data.action.text} <i class="fa-solid fa-arrow-right"></i>`;
+                        extraBtn.innerHTML = `${drawerAction.getAttribute('data-text')} <i class="fa-solid fa-arrow-right"></i>`;
 
                         const scheduleBtn = document.querySelector('.drawer-content > .drawer-action-btn:last-child');
                         if (scheduleBtn && scheduleBtn.parentNode) {
@@ -896,74 +810,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // 9. AUTO-OPEN BENTO DRAWER VIA URL PARAMETER (e.g., ?drawer=ozone)
     // ==========================================================================
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetDrawerKey = urlParams.get('drawer');
+    const drawerUrlParams = new URLSearchParams(window.location.search);
+    const targetDrawerKey = drawerUrlParams.get('drawer');
 
-    if (targetDrawerKey && serviceData[targetDrawerKey]) {
-        const data = serviceData[targetDrawerKey];
-
-        drawerTitle.textContent = data.title;
-        drawerIcon.innerHTML = data.icon;
-        drawerIntro.textContent = data.intro;
-
-        drawerList.innerHTML = '';
-        data.services.forEach(item => {
-            const li = document.createElement('li');
-            li.innerHTML = `<h4>${item.name}</h4><p>${item.desc}</p>`;
-            drawerList.appendChild(li);
-        });
-
-        let mediaContainer = document.getElementById('drawer-media');
-        if (!mediaContainer) {
-            mediaContainer = document.createElement('div');
-            mediaContainer.id = 'drawer-media';
-            drawerIntro.insertAdjacentElement('afterend', mediaContainer);
+    if (targetDrawerKey) {
+        const targetCard = document.querySelector(`.bento-card[data-drawer-target="${targetDrawerKey}"]`);
+        if (targetCard) {
+            setTimeout(() => {
+                targetCard.click();
+            }, 200);
         }
-
-        mediaContainer.innerHTML = '';
-
-        if (data.images && data.images.length > 0) {
-            let galleryHTML = '<div class="drawer-image-gallery">';
-            data.images.forEach(img => {
-                galleryHTML += `
-                    <div class="gallery-item">
-                        <img src="${img.src}" alt="${img.label}" class="drawer-media-img">
-                        <span class="gallery-label">${img.label}</span>
-                    </div>
-                `;
-            });
-            galleryHTML += '</div>';
-            mediaContainer.innerHTML += galleryHTML;
-        }
-
-        if (data.videoId) {
-            mediaContainer.innerHTML += `
-                <div class="video-wrapper">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/${data.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>`;
-        }
-
-        const oldExtraBtn = document.getElementById('drawer-extra-btn');
-        if (oldExtraBtn) oldExtraBtn.remove();
-
-        if (data.action) {
-            const extraBtn = document.createElement('a');
-            extraBtn.id = 'drawer-extra-btn';
-            extraBtn.href = data.action.link;
-            extraBtn.className = 'drawer-action-btn drawer-secondary-btn';
-            extraBtn.innerHTML = `${data.action.text} <i class="fa-solid fa-arrow-right"></i>`;
-
-            const scheduleBtn = document.querySelector('.drawer-content > .drawer-action-btn:last-child');
-            if (scheduleBtn && scheduleBtn.parentNode) {
-                scheduleBtn.parentNode.insertBefore(extraBtn, scheduleBtn);
-            }
-        }
-
-        setTimeout(() => {
-            drawer.classList.add('open');
-            overlay.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }, 200);
     }
 
     // ==========================================================================
@@ -1128,73 +984,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollTrack = document.getElementById('values-scroll-track');
 
     if (presentationZone && scrollTrack) {
-        const earthyColors = [
-            '#1e6b7b', '#2a5c6a', '#3b6e50', '#c85a32', '#9c6628', '#5c4033'
-        ];
+        const slideElements = document.querySelectorAll('.value-slide');
+        const totalSlides = slideElements.length;
 
-        fetch('values.json')
-            .then(response => response.json())
-            .then(valuesData => {
-                const totalSlides = valuesData.length;
-                scrollTrack.style.height = `${totalSlides * 100}vh`;
+        if (totalSlides > 0) {
+            // Expand the invisible scroll track based on hardcoded slide count
+            scrollTrack.style.height = `${totalSlides * 100}vh`;
 
-                valuesData.forEach((data, index) => {
-                    const slide = document.createElement('div');
-                    const alignmentClass = index % 2 === 0 ? 'icon-right' : 'icon-left';
-                    slide.className = `value-slide ${alignmentClass}`;
-                    slide.id = `value-slide-${index}`;
+            // Dynamically generate the mobile snap boundaries
+            slideElements.forEach((slide, index) => {
+                const snapTarget = document.createElement('div');
+                snapTarget.className = 'mobile-scroll-snap-point';
+                snapTarget.style.top = `${index * 100}vh`;
+                scrollTrack.appendChild(snapTarget);
+            });
 
-                    if (index === 0) slide.classList.add('active');
+            // Ensure hardcoded FA icons register with the global pausing matrix
+            window.initializeIconPauses();
 
-                    const titleColor = earthyColors[index % earthyColors.length];
-                    const defList = data.definitions.map(item => `<li>${item}</li>`).join('');
+            window.addEventListener('scroll', () => {
+                if (document.body.classList.contains('no-animations')) return;
 
-                    slide.innerHTML = `
-                        <div class="value-content-wrapper">
-                            <div class="value-text-block">
-                                <h3 class="value-title" style="color: ${titleColor};">${data.title}</h3>
-                                <ul class="value-definitions">${defList}</ul>
-                                <blockquote class="value-quote">"${data.quote}"</blockquote>
-                            </div>
-                            <div class="value-icon-block" style="color: ${titleColor};">
-                                <i class="fa-solid ${data.icon}"></i>
-                            </div>
-                        </div>
-                    `;
+                const trackBounds = scrollTrack.getBoundingClientRect();
+                const totalScrollTrackLength = scrollTrack.offsetHeight - window.innerHeight;
+                const activeScrolledDepth = -trackBounds.top;
 
-                    presentationZone.appendChild(slide);
-                    const snapTarget = document.createElement('div');
-                    snapTarget.className = 'mobile-scroll-snap-point';
-                    snapTarget.style.top = `${index * 100}vh`;
-                    scrollTrack.appendChild(snapTarget);
-                });
+                let progress = Math.max(0, Math.min(1, activeScrolledDepth / totalScrollTrackLength));
+                const segmentLength = 1 / totalSlides;
+                const activeIndex = Math.min(totalSlides - 1, Math.floor(progress / segmentLength));
 
-                // Ensure any newly injected icons get their pauses applied
-                window.initializeIconPauses();
+                for (let i = 0; i < totalSlides; i++) {
+                    const currentSlideElement = document.getElementById(`value-slide-${i}`);
+                    if (!currentSlideElement) continue;
 
-                window.addEventListener('scroll', () => {
-                    if (document.body.classList.contains('no-animations')) return;
-
-                    const trackBounds = scrollTrack.getBoundingClientRect();
-                    const totalScrollTrackLength = scrollTrack.offsetHeight - window.innerHeight;
-                    const activeScrolledDepth = -trackBounds.top;
-
-                    let progress = Math.max(0, Math.min(1, activeScrolledDepth / totalScrollTrackLength));
-                    const segmentLength = 1 / totalSlides;
-                    const activeIndex = Math.min(totalSlides - 1, Math.floor(progress / segmentLength));
-
-                    for (let i = 0; i < totalSlides; i++) {
-                        const currentSlideElement = document.getElementById(`value-slide-${i}`);
-                        if (!currentSlideElement) continue;
-
-                        if (i === activeIndex) {
-                            currentSlideElement.classList.add('active');
-                        } else {
-                            currentSlideElement.classList.remove('active');
-                        }
+                    if (i === activeIndex) {
+                        currentSlideElement.classList.add('active');
+                    } else {
+                        currentSlideElement.classList.remove('active');
                     }
-                });
-            })
-            .catch(err => console.error("Error loading values structure:", err));
+                }
+            });
+        }
     }
 });
