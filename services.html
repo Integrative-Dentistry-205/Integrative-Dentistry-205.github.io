@@ -5,63 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transition" content="same-origin">
+    <meta name="description"
+        content="Explore biological dental services in Seattle. Integrative Dentistry offers biocompatible restorations, SMART amalgam removal, ozone therapy, and IV support.">
     <title>Our Services | Integrative Dentistry Seattle</title>
-    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="canonical" href="https://www.mitchmarderdds.com/services.html">
+    <link rel="icon" type="image/png" href="assets/Logo.webp">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/f1833d9ed3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         disabled id="dyslexia-font">
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": [
     {
-      "@type": "MedicalProcedure",
-      "position": 1,
-      "name": "SMART Amalgam Removal",
-      "description": "Safe Mercury Amalgam Removal Technique utilizing advanced air filtration and strict containment to remove legacy silver fillings."
-    },
-    {
-      "@type": "MedicalTherapy",
-      "position": 2,
-      "name": "Biocompatible Restorations",
-      "description": "100% metal-free, BPA-free, and fluoride-free ceramic and resin dental restorations."
-    },
-    {
-      "@type": "MedicalTherapy",
-      "position": 3,
-      "name": "Ozone Therapy",
-      "description": "Bio-oxidative gas treatments to eliminate oral pathogens and accelerate natural cellular healing."
-    },
-    {
-      "@type": "MedicalTherapy",
-      "position": 4,
-      "name": "Guided Biofilm Therapy (GBT)",
-      "description": "A systematic, predictable solution for dental biofilm management using state-of-the-art AIRFLOW technologies."
-    },
-    {
-      "@type": "MedicalTherapy",
-      "position": 5,
-      "name": "Biological Periodontics",
-      "description": "Non-surgical, microscopic-assisted plaque analysis and laser therapy for inflammatory gum disease."
-    },
-    {
-      "@type": "MedicalTherapy",
-      "position": 6,
-      "name": "Oral Surgery",
-      "description": "Surgical extractions including the removal of the periodontal ligament, platelet-rich fibrin and bone grafting, and zirconium implants."
-    },
-    {
-      "@type": "MedicalTherapy",
-      "position": 7,
-      "name": "IV Therapy",
-      "description": "Intravenous support for heavy metal detoxification, surgery recovery, and radiation repair."
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": ["Dentist", "MedicalBusiness"],
+            "@id": "https://www.mitchmarderdds.com/#clinic",
+            "name": "Integrative Dentistry",
+            "alternateName": "Integrative Dentistry Seattle",
+            "description": "The best in modern holistic dentistry. Offering biocompatible fillings, ozone therapy, and biological dental care in Seattle, Washington.",
+            "url": "https://www.mitchmarderdds.com",
+            "logo": "https://www.mitchmarderdds.com/assets/Logo.webp",
+            "image": "https://www.mitchmarderdds.com/assets/Logo.webp",
+            "telephone": "+1-206-367-6453",
+            "email": "info@integrativedentistry.com",
+            "priceRange": "$$$",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "9730 3rd Avenue NE, Suite 205",
+                "addressLocality": "Seattle",
+                "addressRegion": "WA",
+                "postalCode": "98115",
+                "addressCountry": "US"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 47.700071,
+                "longitude": -122.325015
+            },
+            "openingHoursSpecification": [
+                {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "07:00",
+                "closes": "16:00"
+                }
+            ],
+            "sameAs": [
+                "https://www.facebook.com/IntegrativeDentistrySeattle/",
+                "https://www.yelp.com/biz/integrative-dentistry-seattle"
+            ],
+            "employee": [
+                { "@id": "https://www.mitchmarderdds.com/#dr-birrer" },
+                { "@id": "https://www.mitchmarderdds.com/#dr-cao" },
+                { "@id": "https://www.mitchmarderdds.com/#dr-do" },
+                { "@id": "https://www.mitchmarderdds.com/#dr-daneals" }
+            ],
+            "makesOffer": [
+                { "@id": "https://www.mitchmarderdds.com/#smart-removal" },
+                { "@id": "https://www.mitchmarderdds.com/#biocompatible-restorations" },
+                { "@id": "https://www.mitchmarderdds.com/#ozone-therapy" },
+                { "@id": "https://www.mitchmarderdds.com/#gbt" },
+                { "@id": "https://www.mitchmarderdds.com/#iv-therapy" }
+            ]
+            },
+            {
+            "@type": "Dentist",
+            "@id": "https://www.mitchmarderdds.com/#dr-birrer",
+            "name": "Dr. Bramley Birrer, DDS",
+            "jobTitle": "Biological Dentist",
+            "worksFor": { "@id": "https://www.mitchmarderdds.com/#clinic" }
+            },
+            {
+            "@type": "Dentist",
+            "@id": "https://www.mitchmarderdds.com/#dr-cao",
+            "name": "Dr. Christine Cao, DMD",
+            "jobTitle": "Holistic Clinician",
+            "worksFor": { "@id": "https://www.mitchmarderdds.com/#clinic" }
+            },
+            {
+            "@type": "Dentist",
+            "@id": "https://www.mitchmarderdds.com/#dr-do",
+            "name": "Dr. David Do, DDS",
+            "jobTitle": "Implant Specialist",
+            "worksFor": { "@id": "https://www.mitchmarderdds.com/#clinic" }
+            },
+            {
+            "@type": "Physician",
+            "@id": "https://www.mitchmarderdds.com/#dr-daneals",
+            "name": "Dr. Jeannette Daneals, ND, LMT",
+            "jobTitle": "IV Specialist",
+            "worksFor": { "@id": "https://www.mitchmarderdds.com/#clinic" }
+            },
+            {
+            "@type": "MedicalProcedure",
+            "@id": "https://www.mitchmarderdds.com/#smart-removal",
+            "name": "SMART Amalgam Removal",
+            "description": "Safe Mercury Amalgam Removal Technique utilizing advanced air filtration and strict containment to remove legacy silver fillings."
+            },
+            {
+            "@type": "MedicalTherapy",
+            "@id": "https://www.mitchmarderdds.com/#biocompatible-restorations",
+            "name": "Biocompatible Restorations",
+            "description": "100% metal-free, BPA-free, and fluoride-free ceramic and resin dental restorations."
+            },
+            {
+            "@type": "MedicalTherapy",
+            "@id": "https://www.mitchmarderdds.com/#ozone-therapy",
+            "name": "Ozone Therapy",
+            "description": "Bio-oxidative gas treatments to eliminate oral pathogens and accelerate natural cellular healing."
+            },
+            {
+            "@type": "MedicalTherapy",
+            "@id": "https://www.mitchmarderdds.com/#gbt",
+            "name": "Guided Biofilm Therapy (GBT)",
+            "description": "A systematic, predictable solution for dental biofilm management using state-of-the-art AIRFLOW technologies."
+            },
+            {
+            "@type": "MedicalTherapy",
+            "@id": "https://www.mitchmarderdds.com/#iv-therapy",
+            "name": "IV Therapy",
+            "description": "Intravenous support for heavy metal detoxification, surgery recovery, and radiation repair."
+            }
+        ]
     }
-  ]
-}
-</script>
+    </script>
     <script>
         if (localStorage.getItem('dark-mode') === 'enabled') { document.body.classList.add('dark-theme'); }
         if (localStorage.getItem('adhd-mode') === 'enabled') { document.documentElement.classList.add('adhd-mode'); }
@@ -79,138 +148,126 @@
     <div class="canvas-bg"></div>
 
     <!-- Mobile Contact Hub -->
-    <div class="floating-actions-container">
-        <div class="mobile-contact-hub">
-            <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
-                <i class="fa-solid fa-comments hub-icon-open"></i>
-                <i class="fa-solid fa-xmark hub-icon-close"></i>
-            </button>
-            <div class="contact-hub-menu">
-                <div class="hub-menu-title">Connect With Us</div>
-                <a href="tel:2063676453" class="hub-menu-item">
-                    <div class="hub-item-icon color-call"><i
-                            class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
-                    <div class="hub-item-text">
-                        <span>Call Our Office</span>
-                        <small>(206) 367-6453</small>
-                    </div>
-                </a>
-                <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
-                    <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
-                    <div class="hub-item-text">
-                        <span>Text Us Directly</span>
-                        <small>Real-time coordinator link</small>
-                    </div>
-                </a>
-                <a href="http://dental4.me/integrativedentistry" class="hub-menu-item">
-                    <div class="hub-item-icon color-schedule"><i
-                            class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
-                    <div class="hub-item-text">
-                        <span>Book Appointment</span>
-                        <small>Schedule your holistic visit</small>
-                    </div>
-                </a>
-                <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
-                    <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
-                    <div class="hub-item-text">
-                        <span>Save to Contacts</span>
-                        <small>Add our office to your phone</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Call Us Button -->
-        <a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!"
-            aria-label="Call Us">
-            <span class="bubble-icon">
-                <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
-            </span>
-        </a>
-
-        <!-- Text Us Button -->
-        <a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text"
-            data-tooltip="Text Us!" aria-label="Text Us">
-            <span class="bubble-icon">
-                <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
-            </span>
-        </a>
-
-        <!-- Schedule Now Button -->
-        <a href="http://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule"
-            data-tooltip="Schedule Now!" aria-label="Schedule Now">
-            <span class="bubble-icon">
-                <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
-            </span>
-        </a>
-
-        <!-- Flow IV Partner Button with Timed Speech Bubble -->
-        <div class="flow-iv-wrapper pos-flow-iv">
-            <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
-                Now Partnered With <em>flow iv</em>!
-                <span class="speech-arrow"></span>
-            </div>
-            <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv"
-                data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
-                <span class="bubble-icon flow-iv-icon-wrap">
-                    <i class="fa-vellum fa-solid fa-droplet fa-2xl"
-                        style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
-                </span>
+<div class="floating-actions-container">
+    <div class="mobile-contact-hub">
+        <button class="contact-hub-trigger" aria-label="Open contact option panel" aria-expanded="false">
+            <i class="fa-solid fa-comments hub-icon-open"></i>
+            <i class="fa-solid fa-xmark hub-icon-close"></i>
+        </button>
+    <div class="contact-hub-menu">
+        <div class="hub-menu-title">Connect With Us</div>
+            <a href="tel:2063676453" class="hub-menu-item">
+                <div class="hub-item-icon color-call"><i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Call Our Office</span>
+                    <small>(206) 367-6453</small>
+                </div>
+            </a>
+            <a href="sms:2063676453?&body=Hello! My name is " class="hub-menu-item">
+                <div class="hub-item-icon color-text"><i class="fa-solid fa-comment-sms fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Text Us Directly</span>
+                    <small>Real-time coordinator link</small>
+                </div>
+            </a>
+            <a href="https://dental4.me/integrativedentistry" class="hub-menu-item">
+                <div class="hub-item-icon color-schedule"><i class="fa-duotone fa-solid fa-calendar-days fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Book Appointment</span>
+                    <small>Schedule your holistic visit</small>
+                </div>
+            </a>
+            <a href="#" onclick="downloadVCard(event)" class="hub-menu-item">
+                <div class="hub-item-icon color-contact"><i class="fa-solid fa-user-plus fa-2xl"></i></div>
+                <div class="hub-item-text">
+                    <span>Save to Contacts</span>
+                    <small>Add our office to your phone</small>
+                </div>
             </a>
         </div>
-
-        <!-- 3D Theme Switcher w/ Coin-flip Engine -->
-        <button id="theme-btn" class="action-bubble theme-bubble-position pos-theme"
-            data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
-            <div class="theme-coin">
-                <div class="coin-face face-front">
-                    <i class="fa-graphite fa-thin fa-moon fa-2xl"></i>
-                </div>
-                <div class="coin-face face-back">
-                    <i class="fa-sharp fa-regular fa-sun-bright fa-2xl"></i>
-                </div>
-            </div>
-        </button>
-
-        <!-- Accessibility Button -->
-        <button id="access-btn" class="action-bubble bubble-brown pos-accessibility"
-            data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
-            <span class="bubble-icon">
-                <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
-            </span>
-        </button>
     </div>
 
-    <!-- Dropdown Panel Hooked to the Accessibility Module -->
-    <div id="access-menu" class="hidden">
-        <h3>Accessibility Accommodations</h3>
-        <hr>
+    <!-- Call Us Button -->
+    <a href="tel:2063676453" class="action-bubble bubble-teal pos-call" data-tooltip="Call Us!" aria-label="Call Us">
+        <span class="bubble-icon">
+            <i class="fa-utility-fill fa-semibold fa-phone-volume fa-wag fa-2xl"></i>
+        </span>
+    </a>
+
+    <!-- Text Us Button -->
+    <a href="sms:2063676453?&body=Hello! My name is " class="action-bubble bubble-teal pos-text" data-tooltip="Text Us!" aria-label="Text Us">
+        <span class="bubble-icon">
+            <i class="fa-solid fa-comment-dots fa-flip fa-2xl"></i>
+        </span>
+    </a>
+
+    <!-- Schedule Now Button -->
+    <a href="https://dental4.me/integrativedentistry" class="action-bubble bubble-teal pos-schedule" data-tooltip="Schedule Now!" aria-label="Schedule Now">
+        <span class="bubble-icon">
+            <i class="fa-duotone fa-solid fa-calendar-days fa-float fa-2xl"></i>
+        </span>
+    </a>
+
+    <!-- Flow IV Partner Button with Timed Speech Bubble -->
+    <div class="flow-iv-wrapper pos-flow-iv">
+        <div id="flow-iv-speech" class="flow-iv-speech-bubble" role="status">
+            Now Partnered With <em>flow iv</em>!
+            <span class="speech-arrow"></span>
+        </div>
+        <a href="https://flowiv.org" target="_blank" rel="noopener noreferrer" class="action-bubble bubble-flow-iv" data-tooltip="Visit flow iv!" aria-label="Now Paired With flow iv">
+            <span class="bubble-icon flow-iv-icon-wrap">
+                <i class="fa-vellum fa-solid fa-droplet fa-2xl" style="--fa-primary-color: rgb(111, 157, 238); --fa-secondary-color: rgb(202, 216, 241); --fa-secondary-opacity: 1;"></i>
+            </span>
+        </a>
+    </div>
+
+    <!-- 3D Theme Switcher w/ Coin-flip Engine -->
+    <button id="theme-btn" class="action-bubble theme-bubble-position pos-theme" data-tooltip="Toggle Dark/Light Mode" aria-label="Toggle dark mode">
+        <div class="theme-coin">
+            <div class="coin-face face-front">
+                        <i class="fa-duotone fa-solid fa-moon-stars fa-rotate-by fa-xl" style="--fa-rotate-angle: 350deg;"></i>
+            </div>
+            <div class="coin-face face-back">
+                <i class="fa-solid fa-sun-bright fa-2xl"></i>
+            </div>
+        </div>
+    </button>
+
+    <!-- Accessibility Button -->
+    <button id="access-btn" class="action-bubble bubble-brown pos-accessibility" data-tooltip="Accessibility Options!" aria-label="Accessibility Options">
+        <span class="bubble-icon">
+            <i class="fa-notdog-duo fa-solid fa-universal-access fa-2xl"></i>
+        </span>
+    </button>
+</div>
+
+<!-- Dropdown Panel Hooked to the Accessibility Module -->
+<div id="access-menu" class="hidden">
+    <h3>Accessibility Accommodations</h3>
+    <hr>
         <button id="btn-adhd-mode" onclick="toggleAccessibility('adhd-mode')">ADHD Reading Mask</button>
         <button id="btn-large-cursor" onclick="toggleAccessibility('large-cursor')">Large Cursor</button>
         <button id="btn-dyslexia-font" onclick="toggleAccessibility('dyslexia-font')">Dyslexia Friendly Font</button>
         <button id="btn-high-contrast" onclick="toggleAccessibility('high-contrast')">High Contrast Mode</button>
-    </div>
+</div>
 
     <header>
-        <div class="header-bg-canvas"></div>
+    <div class="header-bg-canvas"></div>
         <nav>
-            <div class="brand-container">
-                <div class="logo">
-                    <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
-                        Integrative
-                        <img src="assets/Logo.png" alt="Integrative Dentistry Emblem" class="header-logo-img">
-                        <span>Dentistry</span>
-                    </a>
-                </div>
-                <p class="tagline">The Best in Modern Holistic Dentistry</p>
+        <div class="brand-container">
+            <div class="logo">
+            <a href="https://mitchmarderdds.com/" style="color: inherit; text-decoration: none;">
+                Integrative 
+                <img src="assets/Logo.webp" alt="Integrative Dentistry Emblem" class="header-logo-img">
+                <span>Dentistry</span>
+            </a>
             </div>
-
+                <p class="tagline">The Best in Modern Holistic Dentistry</p>
+        </div>
+            
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-item">Home</a></li>
-                <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a>
-                    <div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a
-                            href="hygienists.html">Meet The Hygienists</a></div>
-                </li>
+                <li class="dropdown"><a href="#" class="nav-item">Meet Our Team</a><div class="dropdown-content"><a href="doctors.html">Meet The Doctors</a><a href="hygienists.html">Meet The Hygienists</a></div></li>
                 <li><a href="values.html" class="nav-item">Our Values</a></li>
                 <li><a href="about.html" class="nav-item">About Our Office</a></li>
                 <li><a href="services.html" class="nav-item active">Our Services</a></li>
@@ -226,12 +283,12 @@
                 </span>
             </button>
         </nav>
-    </header>
+</header>
 
     <main>
         <section class="bento-services-section scroll-animate visible">
             <div class="services-header">
-                <h2>Our Biological Services</h2>
+                <h1>Our Biological Services</h1>
                 <span class="services-subtitle">Comprehensive Holistic Care</span>
                 <p class="services-intro">Select a care category below to explore our specific treatments, materials,
                     and biological protocols.</p>
@@ -241,63 +298,263 @@
 
                 <div class="bento-card bento-wide" data-drawer-target="biocompatible">
                     <div class="bento-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <h3>Biocompatible Restorations</h3>
+                    <h2>Biocompatible Restorations</h2>
                     <p>100% metal-free, BPA-free, and fluoride-free holistic solutions designed to align with your
                         systemic health.</p>
                     <span class="bento-explore-link">Explore Materials <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">We exclusively utilize premium, non-reactive materials to
+                            ensure your
+                            dental restorations exist in perfect harmony with your immune system.</div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>BPA-Free Composite Fillings</h4>
+                                <p>Tooth-colored structural resins completely devoid of Bisphenol A, offering a natural
+                                    and durable fix.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Ceramic Crowns & Onlays</h4>
+                                <p>High-strength, metal-free zirconium and porcelain caps tailored via CAD/CAM for a
+                                    biocompatible, precise fit.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Fluoride-Free Treatments</h4>
+                                <p>Alternative natural remineralization protocols avoiding systemic fluoride exposure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card" data-drawer-target="smart">
                     <div class="bento-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>SMART Protocol</h3>
+                    <h2>SMART Protocol</h2>
                     <p>Safe Mercury Amalgam Removal Technique protecting your respiratory pathways.</p>
                     <span class="bento-explore-link">View Protocol <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">The Safe Mercury Amalgam Removal Technique (SMART) is a
+                            rigorous set of
+                            safety recommendations developed by the International Academy of Oral Medicine and
+                            Toxicology (IAOMT) to protect patients, dental staff, and the environment from mercury
+                            exposure. Because traditional silver fillings contain approximately 50% mercury and release
+                            toxic vapors and particulates when disrupted, the SMART protocol utilizes extensive
+                            protective measures—including specialized air filtration, strict physical barriers,
+                            alternative oxygen sources, and specific drilling techniques—to ensure the safest possible
+                            removal process.</div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Advanced Airway Protection</h4>
+                                <p>Patients breathe oxygen through a sealed nasal mask, while high-volume at-source
+                                    vacuums and room air filters capture harmful mercury vapors.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Strict Physical Barriers</h4>
+                                <p>Full-body covers and a properly sealed non-latex dental dam are used to prevent
+                                    mercury particles from contacting your skin, clothing, and digestive tract.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Safe Sectioning Techniques</h4>
+                                <p>Copious amounts of water is used along with specialized tools to safely cut and
+                                    remove the filling in large chunks rather than grinding it+.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card" data-drawer-target="ozone">
                     <div class="bento-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Ozone Therapy</h3>
+                    <h2>Ozone Therapy</h2>
                     <p>Natural, highly effective antimicrobial oxygen treatments for accelerated healing.</p>
                     <span class="bento-explore-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">Utilizing ozone therapy as a natural, powerful, and drug-free
+                            treatment
+                            to combat oral infections and promote healing. By applying mixtures of oxygen and ozone—in
+                            gaseous, water, or oil forms—directly to diseased gums or decayed teeth, they create an
+                            oxidative burst that safely eliminates bacteria, viruses, and fungi. This therapy penetrates
+                            both hard and soft tissues to stimulate blood flow, enhance immunity, and accelerate the
+                            body's natural healing processes without the side effects associated with pharmaceutical
+                            drugs.</div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Natural Infection Control</h4>
+                                <p>Uses energized oxygen to safely kill bacteria, viruses, fungi, and parasites without
+                                    pharmaceutical drugs.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Versatile Application</h4>
+                                <p>Applied as a gas, ozonated water, or ozonated oil directly to decayed teeth or
+                                    diseased gums.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Accelerated Healing</h4>
+                                <p>Penetrates hard and soft tissues to stimulate blood flow, produce antioxidants, and
+                                    boost your immune response.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card bento-wide" data-drawer-target="iv">
-                    <div class="bento-icon"><i class="fa-solid fa-crutch"></i></div>
-                    <h3>IV Therapy & Support</h3>
+                    <div class="bento-icon"><i class="fa-duotone fa-solid fa-hands-holding-heart"></i></div>
+                    <h2>IV Therapy & Support</h2>
                     <p>Custom intravenous treatments to support your body's natural healing processes, without affecting
                         your gut health.</p>
                     <span class="bento-explore-link">View Options <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">Aiding in protecting, supporting, and healing your body,
+                            without
+                            affecting your gut biome.</div>
+                        <div class="service-drawer-action" data-text="View Full IV Menu" data-link="ivtherapy.html">
+                        </div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Metal Detoxification</h4>
+                                <p>Reduces the toxic burden of heavy metal exposure including mercury, lead, cadmium,
+                                    aluminum, arsenic, and excess iron and copper.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Surgery Support</h4>
+                                <p>Great for supporting all your recovery needs after any surgery, including
+                                    extractions.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Radiation Repair</h4>
+                                <p>A radiation countermeasure providing antioxidants that mitigate mitochondrial DNA
+                                    damage from x-rays, chemotherapeutic agents, and flying.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card bento-wide" data-drawer-target="periodontics">
                     <div class="bento-icon"><i class="fa-solid fa-tooth"></i></div>
-                    <h3>Biological Periodontics</h3>
+                    <h2>Biological Periodontics</h2>
                     <p>Protecting the oral-systemic connection. We treat underlying inflammatory conditions gently
                         without heavy chemicals to protect your heart and cardiovascular health.</p>
                     <span class="bento-explore-link">Explore Treatments <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">Addressing the critical oral-systemic connection by
+                            eliminating
+                            inflammatory gum disease without harsh chemicals or invasive cutting.</div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Microscopic Plaque Analysis</h4>
+                                <p>Identifying specific bacterial strains under a microscope for targeted, intelligent
+                                    therapy.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Laser Pocket Decontamination</h4>
+                                <p>Gentle laser therapy to eliminate diseased tissue and biofilm while preserving
+                                    healthy gums.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Homecare Guidance and Support</h4>
+                                <p>Judgement-free teaching of proper at-home care for improved oral health.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card" data-drawer-target="surgery">
                     <div class="bento-icon"><i class="fa-solid fa-staff-snake"></i></div>
-                    <h3>Holistic Oral Surgery</h3>
+                    <h2>Holistic Oral Surgery</h2>
                     <p>Biological extractions, PRF healing, and ceramic implant restorations.</p>
                     <span class="bento-explore-link">View Options <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">When extraction or surgery is inevitable, we use
+                            systemic-friendly
+                            techniques to guarantee safe removal and rapid recovery.</div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Biological Extractions</h4>
+                                <p>Thorough removal of the periodontal ligament (cavitation prevention) following tooth
+                                    extraction.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>PRF (Platelet-Rich Fibrin)</h4>
+                                <p>Using a small sample of your own blood to create a natural healing matrix for
+                                    surgical sites.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Zirconia Implants</h4>
+                                <p>A 100% metal-free, highly biocompatible ceramic alternative to traditional titanium
+                                    root implants.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card" data-drawer-target="gbt">
                     <div class="bento-icon"><i class="fa-solid fa-wind"></i></div>
-                    <h3>Guided Biofilm Therapy</h3>
+                    <h2>Guided Biofilm Therapy</h2>
                     <p>A systematic, predictable solution for dental biofilm management using state-of-the-art AIRFLOW
                         technologies.</p>
                     <span class="bento-explore-link">Explore AIRFLOW <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">Cleanings for Sensitive Teeth! Guided Biofilm Therapy (GBT) is
+                            a
+                            systematic, predictable solution for dental biofilm management using state-of-the-art
+                            AIRFLOW technologies. Air, heated water and low-abrasive powder combine to break down and
+                            flush away biofilm.</div>
+                        <div class="service-drawer-media" data-video="G_lspojuA0U">
+                            <img src="assets/gbt-before-300.webp" loading="lazy" alt="Before">
+                            <img src="assets/gbt-disclosure-300.webp" loading="lazy" alt="Disclosed">
+                            <img src="assets/gbt-after-300.webp" loading="lazy" alt="After AIRFLOW®">
+                        </div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Minimally Invasive</h4>
+                                <p>AIRFLOW® is gentle on all types of dental tissues including dentine, cementum,
+                                    enamel, and gums.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Maximum Comfort</h4>
+                                <p>The spray mixture does all the work, and with the fine-grain powder, it just feels
+                                    like warm water is being sprayed on the gums.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Universal Application</h4>
+                                <p>Can be applied to almost any patient, including those with implants, crowns,
+                                    composite fillings, braces, and pediatric patients.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bento-card bento-wide" data-drawer-target="eboo">
                     <div class="bento-icon"><i class="fa-duotone fa-solid fa-syringe"></i></div>
-                    <h3>IV Ozone Therapies and Blood Draws</h3>
-                    <p>Protecting the oral-systemic connection. We treat underlying inflammatory conditions gently
-                        without heavy chemicals to protect your heart and cardiovascular health.</p>
+                    <h2>IV Ozone Therapies and Blood Draws</h2>
+                    <p>Experience advanced clinical support with our comprehensive naturopathic offerings, including
+                        Extracorporeal Blood Oxygenation and Ozonation (EBOO), Ultraviolet Blood Irradiation (UVBI), and
+                        comfortable on-site phlebotomy services.</p>
                     <span class="bento-explore-link">Explore Treatments <i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="service-drawer-data" style="display: none;">
+                        <div class="service-drawer-intro">From EBOO to UVBI, and blood draws for testings, Dr. Daneals
+                            has an expanded repertoire of treatments and modalities to offer in addition to IV Therapies
+                            in our office.</div>
+                        <div class="service-drawer-list">
+                            <div class="service-drawer-item">
+                                <h4>Extracorporeal Blood Oxygenation & Ozonation</h4>
+                                <p>More commonly known as 'EBOO', it is an intelligent ozone therapy that removes blood
+                                    from the body and runs it through a closed-circuit system. EBOO has been shown to
+                                    treat 'Long COVID' and adverse drug reactions, proving its status as a superior IV
+                                    ozone treatment, treating more blood by volume that any other ozone treatment
+                                    available, while remaining gentle in its lower concentrations of ozone.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Ultraviolet Blood Irradiation</h4>
+                                <p>Also known as Biophoton Light Therapy, UVBI is a cutting edge therapy that uses the
+                                    combination of ozone gas and UVB light to purify, sterilize, and destroy
+                                    micro-organisms in the blood.</p>
+                            </div>
+                            <div class="service-drawer-item">
+                                <h4>Blood Draw Services</h4>
+                                <p>With on-site phlebotomy, Dr. Daneals is able to offer a quick, stress-free blood draw
+                                    experience for a multitude of tests. All blood is processed through LabCorp.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -314,70 +571,68 @@
             <p id="drawer-intro" class="drawer-intro">Category introduction goes here.</p>
             <ul id="drawer-list" class="drawer-service-list">
             </ul>
-            <a href="http://dental4.me/integrativedentistry" class="drawer-action-btn">Schedule an Appointment <i
+            <a href="https://dental4.me/integrativedentistry" class="drawer-action-btn">Schedule an Appointment <i
                     class="fa-solid fa-calendar-check"></i></a>
         </div>
     </div>
 
     <footer id="contact" class="scroll-animate">
-        <div class="footer-grid">
-            <div class="contact-details">
-                <h2>Connect With Us</h2>
-                <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
+    <div class="footer-grid">
+        <div class="contact-details">
+            <h2>Connect With Us</h2>
+            <p class="address-line">9730 3rd Avenue NE, Suite 205<br>Seattle, WA, 98115</p>
+            <div class="meta-links">
+                <p><strong>Call or Text:</strong> <a href="tel:2063676453"
+                        data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com"
+                        data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a>
+                </p>
+            </div>
+            <div class="hours-block">
+                <h3>Office Hours</h3>
+                <p>Monday – Thursday: 7:00 AM – 4:00 PM</p>
+            </div>
+            <div>
+                <br>
+                <h3>Can't talk now?</h3>
                 <div class="meta-links">
-                    <p><strong>Call or Text:</strong> <a href="tel:2063676453"
-                            data-tooltip="Opens your native calling app to call our office directly">206-367-6453</a>
-                    </p>
-                    <p><strong>Email:</strong> <a href="mailto:info@integrativedentistry.com"
-                            data-tooltip="Opens your native email app to send us a message">info@integrativedentistry.com</a>
-                    </p>
+                    <p><a href="contact.html#callback-request"
+                        data-tooltip="Brings you to our contact request form.">Request for us to reach out to you at a better time!</a></p>
                 </div>
-                <div class="hours-block">
-                    <h3>Office Hours</h3>
-                    <p>Monday – Thursday: 7:00 AM – 4:00 PM</p>
-                </div>
-                <div>
-                    <br>
-                    <h3>Can't talk now?</h3>
-                    <div class="meta-links">
-                        <p><a href="contact.html#callback-request"
-                                data-tooltip="Brings you to our contact request form.">Request for us to reach out to
-                                you at a better time!</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="map-wrapper">
-                <div class="fallback-map-ui">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <div class="social-links-container">
-                <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook"
-                    target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
-                    <i class="fa-brands fa-facebook fa-2xl"></i>
-                </a>
-                <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener"
-                    data-tooltip="See updates on Instagram">
-                    <i class="fa-brands fa-instagram fa-2xl"></i>
-                </a>
-                <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener"
-                    data-tooltip="Watch us on TikTok">
-                    <i class="fa-brands fa-tiktok fa-2xl"></i>
-                </a>
-                <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank"
-                    rel="noopener" data-tooltip="View our Google Business listing">
-                    <i class="fa-brands fa-google fa-2xl"></i>
-                </a>
-                <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp"
-                    target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
-                    <i class="fa-brands fa-yelp fa-2xl"></i>
-                </a>
             </div>
         </div>
-    </footer>
+        <div class="map-wrapper">
+            <div class="fallback-map-ui">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.1939993959363!2d-122.32501500000001!3d47.700071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013ff6bbf59c9%3A0x12124b2e3f065d6d!2sIntegrative%20Dentistry!5e0!3m2!1sen!2sus!4v1781202363336!5m2!1sen!2sus"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="social-links-container">
+            <a href="https://www.facebook.com/IntegrativeDentistrySeattle/" class="social-circle-btn facebook"
+                target="_blank" rel="noopener" data-tooltip="Follow our Facebook community">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+            </a>
+            <a href="#" class="social-circle-btn instagram" target="_blank" rel="noopener"
+                data-tooltip="See updates on Instagram">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+            </a>
+            <a href="#" class="social-circle-btn tiktok" target="_blank" rel="noopener"
+                data-tooltip="Watch us on TikTok">
+                <i class="fa-brands fa-tiktok fa-2xl"></i>
+            </a>
+            <a href="https://share.google/nsMCfHDNv0bOtifRO" class="social-circle-btn google" target="_blank"
+                rel="noopener" data-tooltip="View our Google Business listing">
+                <i class="fa-brands fa-google fa-2xl"></i>
+            </a>
+            <a href="https://www.yelp.com/biz/integrative-dentistry-seattle" class="social-circle-btn yelp"
+                target="_blank" rel="noopener" data-tooltip="Read our reviews on Yelp">
+                <i class="fa-brands fa-yelp fa-2xl"></i>
+            </a>
+        </div>
+    </div>
+</footer>
 
     <div id="cursor-tooltip" class="cursor-tooltip"></div>
     <div id="image-lightbox-overlay" class="lightbox-overlay hidden">
