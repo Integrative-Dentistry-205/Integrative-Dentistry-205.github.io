@@ -6301,6 +6301,7 @@ html.high-contrast body.dark-theme .iv-contains {
    width: 100%;
    max-width: 1300px;
    margin: 60px auto 0 auto;
+   padding-right: 100px;
    text-align: right;
    font-size: 0.75rem;
    color: rgba(255, 255, 255, 0.6);
@@ -6312,5 +6313,6 @@ html.high-contrast body.dark-theme .iv-contains {
    .site-credit {
       text-align: center;
       margin-top: 40px;
+      padding-right: 0;
    }
 }
