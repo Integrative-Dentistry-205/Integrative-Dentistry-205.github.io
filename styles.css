@@ -2194,6 +2194,7 @@ html.high-contrast .service-nav-item {
 }
 
 html.high-contrast .service-nav-item .service-nav-text h3,
+html.high-contrast .service-nav-item .service-nav-text h2,
 html.high-contrast .service-nav-item .service-nav-text p,
 html.high-contrast .service-nav-item .service-arrow,
 html.high-contrast .service-nav-item .service-nav-icon {
@@ -2214,6 +2215,7 @@ html.high-contrast .service-nav-item.active .service-nav-icon {
 }
 
 html.high-contrast .service-nav-item.active .service-nav-text h3,
+html.high-contrast .service-nav-item.active .service-nav-text h2,
 html.high-contrast .service-nav-item.active .service-nav-text p,
 html.high-contrast .service-nav-item.active .service-arrow {
     color: #ffffff !important;
@@ -2251,6 +2253,7 @@ html.high-contrast body.dark-theme .service-nav-item {
 }
 
 html.high-contrast body.dark-theme .service-nav-item .service-nav-text h3,
+html.high-contrast body.dark-theme .service-nav-item .service-nav-text h2,
 html.high-contrast body.dark-theme .service-nav-item .service-nav-text p,
 html.high-contrast body.dark-theme .service-nav-item .service-arrow {
     color: var(--hc-gold) !important;
@@ -2262,6 +2265,7 @@ html.high-contrast body.dark-theme .service-nav-item.active {
 }
 
 html.high-contrast body.dark-theme .service-nav-item.active .service-nav-text h3,
+html.high-contrast body.dark-theme .service-nav-item.active .service-nav-text h2,
 html.high-contrast body.dark-theme .service-nav-item.active .service-nav-text p,
 html.high-contrast body.dark-theme .service-nav-item.active .service-arrow {
     color: #000000 !important;
@@ -6287,4 +6291,26 @@ html.high-contrast body.dark-theme .iv-card:hover .iv-price {
 
 html.high-contrast body.dark-theme .iv-contains {
     border: 2px solid var(--hc-gold) !important;
+}
+
+/* ==========================================================================
+   22. DEVELOPMENT CREDIT FOOTER LINE
+   ========================================================================== */
+
+.site-credit {
+   width: 100%;
+   max-width: 1300px;
+   margin: 60px auto 0 auto;
+   text-align: right;
+   font-size: 0.75rem;
+   color: rgba(255, 255, 255, 0.6);
+   letter-spacing: 0.5px;
+}
+
+/* --- MOBILE: 1024px and smaller --*/
+@media (max-width: 1024px) {
+   .site-credit {
+      text-align: center;
+      margin-top: 40px;
+   }
 }
